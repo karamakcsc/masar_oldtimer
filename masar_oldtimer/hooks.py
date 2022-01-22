@@ -97,6 +97,9 @@ app_license = "MIT"
 #	}
 # }
 
+doctype_js = {
+    "Item" : "custom/item/item.js"
+ }
 # Scheduled Tasks
 # ---------------
 
@@ -172,4 +175,17 @@ user_data_fields = [
 # auth_hooks = [
 # 	"masar_oldtimer.auth.validate"
 # ]
-
+fixtures = [
+    {"dt": "Custom Field", "filters": [
+        [
+            "name", "in", [
+		"Item-categories",
+		"Item-item_third_category",
+		"Item-item_second_category",
+		"Item-item_first_category",
+        "Item-motorcycles",
+        "Item-item_motorcycles"
+            ]
+        ]
+    ]}
+]
