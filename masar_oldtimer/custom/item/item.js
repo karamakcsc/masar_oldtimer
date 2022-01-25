@@ -29,3 +29,29 @@ frappe.ui.form.on("Item", {
   }
 
 });
+
+
+frappe.ui.form.on("Item", {
+	item_length: function(frm){
+  calculate_total(frm);
+	},
+	item_width: function(frm){
+		calculate_total(frm);
+	},
+  item_height: function(frm){
+  calculate_total(frm);
+  },
+  volumetric_factor: function(frm){
+  calculate_total(frm);
+  }
+});
+
+var calculate_total = function(frm) {
+  var doc = frm.doc
+  if (doc.volumetric_factor != 0) {
+    frm.set_value("volumetric_weight",(doc.item_length * doc.item_width * doc.item_height)/doc.volumetric_factor)
+	    }
+  else {
+      frm.set_value("volumetric_weight",0);
+  }
+}

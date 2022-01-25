@@ -184,7 +184,14 @@ fixtures = [
 		"Item-item_second_category",
 		"Item-item_first_category",
         "Item-motorcycles",
-        "Item-item_motorcycles"
+        "Item-item_motorcycles",
+        "Item-item_dimension",
+        "Item-item_height",
+        "Item-item_length",
+        "Item-item_width",
+        "Item-volumetric_factor",
+        "Item-volumetric_weight",
+        "Item-column_break_39"
             ]
         ]
     ]}
