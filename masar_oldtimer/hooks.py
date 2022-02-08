@@ -191,7 +191,24 @@ fixtures = [
         "Item-item_width",
         "Item-volumetric_factor",
         "Item-volumetric_weight",
-        "Item-column_break_39"
+        "Item-column_break_39",
+        "Item-ecommerce",
+        "Item-publish_on_oldtimer",
+        "Item-publish_on_motosapiens",
+        "Item-publish_on_bajadesigns",
+        "Item-column_break_44",
+        "Item-column_break_46",
+        "Warehouse-bin_location",
+        "Warehouse-aisle",
+        "Warehouse-column_break_2",
+        "Warehouse-unit",
+        "Warehouse-shelf",
+        "Warehouse-shelf_column",
+        "Warehouse-bin",
+        "Warehouse-column_break_15",
+        "Item Motorcycle-year",
+        "Item Motorcycle-brand",
+        "Item Motorcycle-model"
             ]
         ]
     ]}
