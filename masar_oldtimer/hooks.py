@@ -98,7 +98,9 @@ app_license = "MIT"
 # }
 
 doctype_js = {
-    "Item" : "custom/item/item.js"
+    "Item" : "custom/item/item.js",
+    "Warehouse" : "custom/warehouse/warehouse.js",
+
  }
 # Scheduled Tasks
 # ---------------
@@ -208,7 +210,8 @@ fixtures = [
         "Warehouse-column_break_15",
         "Item Motorcycle-year",
         "Item Motorcycle-brand",
-        "Item Motorcycle-model"
+        "Item Motorcycle-model",
+        "Item-secondary_item_group"
             ]
         ]
     ]}

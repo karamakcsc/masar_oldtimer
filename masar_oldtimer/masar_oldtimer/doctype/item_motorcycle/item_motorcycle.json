@@ -7,7 +7,10 @@
  "engine": "InnoDB",
  "field_order": [
   "motorcycle",
-  "motorcycle_barnd"
+  "motorcycle_barnd",
+  "year",
+  "brand",
+  "model"
  ],
  "fields": [
   {
@@ -21,15 +24,38 @@
   {
    "fieldname": "motorcycle_barnd",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Motorcycle Barnd",
    "options": "Motorcycle Brand"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "motorcycle.year",
+   "fieldname": "year",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Year"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "motorcycle.brand",
+   "fieldname": "brand",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Brand"
+  },
+  {
+   "bold": 1,
+   "fetch_from": "motorcycle.model",
+   "fieldname": "model",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Model"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-01-25 01:55:48.750494",
+ "modified": "2022-02-08 11:52:44.836465",
  "modified_by": "Administrator",
  "module": "Masar Oldtimer",
  "name": "Item Motorcycle",
