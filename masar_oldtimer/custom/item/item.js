@@ -48,7 +48,7 @@ frappe.ui.form.on("Item", {
           },
           callback: function(r) {
             $.each(r.message, function(i, d) {
-              var row = frappe.model.add_child(cur_frm.doc, "Item First Category Value", "first_category");
+              var row = frappe.model.add_child(frm.doc, "Item First Category Value", "first_category");
               row.first_category = d.first_category;
               refresh_field("first_category");
             });
