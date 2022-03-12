@@ -7,10 +7,6 @@ from erpnext.accounts.general_ledger import make_gl_entries
 from erpnext.controllers.accounts_controller import AccountsController
 from frappe.model.document import Document
 
-
-
-
-
 @frappe.whitelist()
 @frappe.validate_and_sanitize_search_inputs
 def second_category_query(doctype, txt, searchfield, start, page_len, filters):
@@ -44,8 +40,6 @@ def third_category_query(doctype, txt, searchfield, start, page_len, filters):
 			Select name,second_category,first_category
 			From `tabItem Third Category` tisc
 			Where second_category = '%s'"""%(categories_tuple) ,as_dict=True)
-
-
 
 @frappe.whitelist()
 def insert_selected_first_category(selected_categories):

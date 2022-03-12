@@ -212,6 +212,19 @@ fixtures = [
         "Item Motorcycle-brand",
         "Item Motorcycle-model",
         "Item-secondary_item_group"
+        "Item-add_third_category",
+        "Item-add_second_category",
+        "Item-add_first_category",
+        "Item-third_category",
+        "Item-second_category",
+        "Item-first_category",
+        "Item-column_break_38",
+        "Item-cars",
+        "Item-sport_track",
+        "Item-off_road",
+        "Item-adv_touring",
+        "Item-cafe_urban",
+        "Item-section_break_30"
             ]
         ]
     ]}
