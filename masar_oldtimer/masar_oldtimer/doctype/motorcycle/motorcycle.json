@@ -3,7 +3,7 @@
  "allow_import": 1,
  "allow_rename": 1,
  "autoname": "format:{motor_year}-{brand}-{model}",
- "creation": "2022-01-21 02:37:57.514844",
+ "creation": "2022-03-15 21:28:41.862272",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
@@ -13,6 +13,14 @@
   "model"
  ],
  "fields": [
+  {
+   "fieldname": "motor_year",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Year"
+  },
   {
    "fieldname": "brand",
    "fieldtype": "Link",
@@ -29,19 +37,11 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Model"
-  },
-  {
-   "fieldname": "motor_year",
-   "fieldtype": "Data",
-   "in_global_search": 1,
-   "in_list_view": 1,
-   "in_standard_filter": 1,
-   "label": "Year"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-03-15 20:10:07.799443",
+ "modified": "2022-03-15 21:28:41.862272",
  "modified_by": "Administrator",
  "module": "Masar Oldtimer",
  "name": "Motorcycle",
