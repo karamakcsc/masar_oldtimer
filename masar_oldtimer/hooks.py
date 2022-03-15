@@ -208,9 +208,9 @@ fixtures = [
         "Warehouse-shelf_column",
         "Warehouse-bin",
         "Warehouse-column_break_15",
-        "Item Motorcycle-year",
-        "Item Motorcycle-brand",
-        "Item Motorcycle-model",
+        #"Item Motorcycle-year",
+        #"Item Motorcycle-brand",
+        #"Item Motorcycle-model",
         "Item-secondary_item_group"
         "Item-add_third_category",
         "Item-add_second_category",
