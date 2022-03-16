@@ -19,7 +19,8 @@
   }
  ],
  "index_web_pages_for_search": 1,
- "is_virtual": 1,
+ "is_virtual": 0,
+ "custom": 1,
  "istable": 1,
  "links": [],
  "modified": "2022-02-08 02:16:03.312515",
