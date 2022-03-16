@@ -15,7 +15,7 @@
    "fieldtype": "Link",
    "label": "Item Group",
    "options": "Item Group",
-   "unique": 1,
+   "unique": 0,
    "in_grid_view": 1
   }
  ],
