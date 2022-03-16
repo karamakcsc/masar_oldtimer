@@ -182,9 +182,9 @@ fixtures = [
         [
             "name", "in", [
 		"Item-categories",
-		"Item-item_third_category",
-		"Item-item_second_category",
-		"Item-item_first_category",
+		# "Item-item_third_category",
+		# "Item-item_second_category",
+		# "Item-item_first_category",
         "Item-motorcycles",
         "Item-item_motorcycles",
         "Item-item_dimension",
@@ -211,7 +211,6 @@ fixtures = [
         #"Item Motorcycle-year",
         #"Item Motorcycle-brand",
         #"Item Motorcycle-model",
-        "Item-secondary_item_group"
         "Item-add_third_category",
         "Item-add_second_category",
         "Item-add_first_category",
@@ -224,7 +223,8 @@ fixtures = [
         "Item-off_road",
         "Item-adv_touring",
         "Item-cafe_urban",
-        "Item-section_break_30"
+        "Item-section_break_30",
+        "Item-item_class"
             ]
         ]
     ]}
