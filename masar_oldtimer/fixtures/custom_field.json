@@ -1272,7 +1272,7 @@
   "width": null
  },
  {
-  "allow_in_quick_entry": 1,
+  "allow_in_quick_entry": 0,
   "allow_on_submit": 0,
   "bold": 0,
   "collapsible": 0,
@@ -1302,7 +1302,7 @@
   "label": "Item Motorcycles",
   "length": 0,
   "mandatory_depends_on": null,
-  "modified": "2022-01-22 19:28:17.400179",
+  "modified": "2022-03-16 14:32:06.300025",
   "name": "Item-item_motorcycles",
   "no_copy": 0,
   "non_negative": 0,

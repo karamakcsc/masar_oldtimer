@@ -7,7 +7,7 @@
  "engine": "InnoDB",
  "field_order": [
   "third_category",
-  "first_category"
+  "first_caregory"
  ],
  "fields": [
   {
@@ -19,18 +19,16 @@
   },
   {
    "fetch_from": "item_third_category.first_category",
-   "fieldname": "first_category",
-   "fieldtype": "Link",
+   "fieldname": "first_caregory",
+   "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "First Category",
-   "options": "Item Third Category",
-   "read_only": 1
+   "label": "First Caregory"
   }
  ],
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2022-03-14 17:00:14.587756",
+ "modified": "2022-03-16 14:50:05.679488",
  "modified_by": "Administrator",
  "module": "Masar Oldtimer",
  "name": "Item Third Category Value",
