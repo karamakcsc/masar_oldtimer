@@ -1,7 +1,19 @@
 frappe.ui.form.on("Warehouse", {
-  aisle: function (frm) {
-    frm.set_value('warehouse_name', frm.doc.aisle);
+  warehouse_prefix: function (frm) {
+    frm.set_value('warehouse_name', frm.doc.warehouse_prefix);
   },
+  aisle: function (frm) {
+  if (frm.doc.warehouse_name != '' && frm.doc.warehouse_name != null) {
+    var wname = frm.doc.warehouse_name
+     wname = wname + '-' + frm.doc.aisle;
+    frm.set_value('warehouse_name', wname);
+  }
+  else {
+    if (frm.doc.aisle != '' && frm.doc.aisle != null){
+    frappe.msgprint("Please Fill Warehouse Prefix")
+  }
+}
+},
   unit: function (frm) {
   if (frm.doc.warehouse_name != '' && frm.doc.warehouse_name != null) {
     var wname = frm.doc.warehouse_name
@@ -39,3 +51,10 @@ frappe.ui.form.on("Warehouse", {
     }
   }
 });
+
+// frappe.ui.form.on("Warehouse","parent_warehouse", function(frm){
+// if (frm.parent_warehouse !=''){
+// frm.doc.warehouse_prefix = frm.doc.parent_warehouse;
+// frm.refresh_field('warehouse_prefix');
+// }
+// });

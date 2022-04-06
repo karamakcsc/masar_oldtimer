@@ -224,7 +224,9 @@ fixtures = [
         "Item-adv_touring",
         "Item-cafe_urban",
         "Item-section_break_30",
-        "Item-item_class"
+        "Item-item_class",
+        "Warehouse-warehouse_prefix",
+        "Warehouse-column_prefix"
             ]
         ]
     ]}
