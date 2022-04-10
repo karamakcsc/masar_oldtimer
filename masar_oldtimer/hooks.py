@@ -183,9 +183,6 @@ fixtures = [
         [
             "name", "in", [
 		"Item-categories",
-		# "Item-item_third_category",
-		# "Item-item_second_category",
-		# "Item-item_first_category",
         "Item-motorcycles",
         "Item-item_motorcycles",
         "Item-item_dimension",
@@ -209,9 +206,6 @@ fixtures = [
         "Warehouse-shelf_column",
         "Warehouse-bin",
         "Warehouse-column_break_15",
-        #"Item Motorcycle-year",
-        #"Item Motorcycle-brand",
-        #"Item Motorcycle-model",
         "Item-add_third_category",
         "Item-add_second_category",
         "Item-add_first_category",
@@ -227,7 +221,11 @@ fixtures = [
         "Item-section_break_30",
         "Item-item_class",
         "Warehouse-warehouse_prefix",
-        "Warehouse-column_prefix"
+        "Warehouse-column_prefix",
+        "Customer-riding_style",
+        "Customer-section_break_56",
+        "Customer-customer_motorcycle",
+        "Customer-section_break_54"
             ]
         ]
     ]}
