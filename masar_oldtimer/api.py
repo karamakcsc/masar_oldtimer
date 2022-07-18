@@ -34,11 +34,13 @@ def get_variants_details(variant=None):
 
 
 @frappe.whitelist()
-def get_second_cat(cat_nd=None):
-	return frappe.db.sql(""" SELECT ti.item_code, tiscv.second_category
+def get_cat(cat_nd=None):
+	return frappe.db.sql(""" SELECT ti.item_code, tiscv.second_category, titcv.third_category
 								FROM `tabItem` ti
 								INNER JOIN `tabItem Second Category Value` tiscv
 								ON tiscv.parent = ti.item_code
+								INNER JOIN `tabItem Third Category Value` titcv
+								ON titcv.parent = ti.item_code
 								WHERE ti.brand = 'Baja Designs'
 								GROUP BY ti.item_code  ORDER BY ti.creation DESC;""", as_dict=True)
 
