@@ -18,7 +18,7 @@ def get_variants_details(variant=None):
 							Inner Join `tabFile` tf
 							ON ti.item_code = tf.attached_to_name
 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' AND ti.publish_on_bajadesigns = 1 AND ti.variant_of <> ""
-							GROUP BY variant_of ORDER BY ti.creation DESC;""", as_dict=True)
+							GROUP BY ti.item_code ORDER BY ti.creation DESC;""", as_dict=True)
 
 
 
