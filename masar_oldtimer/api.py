@@ -4,12 +4,16 @@ import requests , json
 
 @frappe.whitelist()
 def get_item_details(item=None):
-	return frappe.db.sql(""" SELECT * ,tf.file_url
+	return frappe.db.sql(""" SELECT * ,tf.file_url, tiscv.second_category, titcv.third_category
 							FROM `tabItem` ti
 							Inner Join `tabFile` tf
 							ON ti.item_code = tf.attached_to_name
+							INNER JOIN `tabItem Second Category Value` tiscv
+							ON tiscv.parent = ti.item_code
+							INNER JOIN `tabItem Third Category Value` titcv
+							ON titcv.parent = ti.item_code
 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' AND ti.publish_on_bajadesigns = 1
-							ORDER BY ti.creation DESC;""", as_dict=True)
+							GROUP BY ti.item_code ORDER BY ti.creation DESC;""", as_dict=True)
 
 # @frappe.whitelist()
 # def get_item_details(item=None):
