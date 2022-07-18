@@ -41,7 +41,7 @@ def get_cat(cat_nd=None):
 								ON tiscv.parent = ti.item_code
 								INNER JOIN `tabItem Third Category Value` titcv
 								ON titcv.parent = ti.item_code
-								WHERE ti.brand = 'Baja Designs'
+								WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' AND ti.publish_on_bajadesigns = 1
 								GROUP BY ti.item_code  ORDER BY ti.creation DESC;""", as_dict=True)
 
 # @frappe.whitelist()
