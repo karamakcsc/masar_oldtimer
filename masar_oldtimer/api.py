@@ -17,7 +17,7 @@ def get_item_details(item=None):
 							INNER JOIN `tabItem Price` tip
 							ON (tip.item_code = ti.item_code AND tip.brand = ti.brand)
 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' AND ti.publish_on_bajadesigns = 1 AND tip.price_list = 'BajaDesigns MSRP -USD'
-							GROUP BY ti.item_code ORDER BY ti.creation DESC;""", as_dict=True)
+							ORDER BY ti.creation DESC;""", as_dict=True)
 
 # @frappe.whitelist()
 # def get_item_details(item=None):
