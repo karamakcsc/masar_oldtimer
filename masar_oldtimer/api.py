@@ -4,10 +4,12 @@ import requests , json
 
 @frappe.whitelist()
 def get_item_details(item=None):
-	return frappe.db.sql(""" SELECT * ,tf.file_url, tiscv.second_category, titcv.third_category
+	return frappe.db.sql(""" SELECT * ,tf.file_url, tifcv.first_category, tiscv.second_category, titcv.third_category
 							FROM `tabItem` ti
 							Inner Join `tabFile` tf
 							ON ti.item_code = tf.attached_to_name
+							INNER JOIN `tabItem First Category Value` tifcv
+							ON tifcv.parent = ti.item_code
 							INNER JOIN `tabItem Second Category Value` tiscv
 							ON tiscv.parent = ti.item_code
 							INNER JOIN `tabItem Third Category Value` titcv
