@@ -13,10 +13,12 @@ def get_item_details(item=None):
 
 @frappe.whitelist()
 def get_variants_details(variant=None):
-	return frappe.db.sql(""" SELECT *
+	return frappe.db.sql(""" SELECT *, tf.file_url
 							FROM `tabItem`
-							WHERE disabled= 0 AND brand = 'Baja Designs' AND publish_on_bajadesigns = 1 AND variant_of != ""
-							ORDER BY creation DESC;""", as_dict=True)
+							Inner Join `tabFile` tf
+							ON ti.item_code = tf.attached_to_name
+							WHERE disabled= 0 AND brand = 'Baja Designs' AND publish_on_bajadesigns = 1 AND variant_of <> ""
+							GROUP BY variant_of ORDER BY creation DESC LIMIT 50;""", as_dict=True)
 
 
 
