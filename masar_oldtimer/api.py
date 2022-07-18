@@ -1,6 +1,7 @@
 import frappe
 import requests , json
 
+
 @frappe.whitelist()
 def get_item_details(item=None):
 	return frappe.db.sql(""" SELECT * ,tf.file_url
@@ -9,6 +10,15 @@ def get_item_details(item=None):
 							ON ti.item_code = tf.attached_to_name
 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' AND ti.publish_on_bajadesigns = 1
 							ORDER BY ti.creation DESC;""", as_dict=True)
+
+# @frappe.whitelist()
+# def get_item_details(item=None):
+# 	return frappe.db.sql(""" SELECT ti.name, ti.item_name, ti.item_code, ti.description, ti.image, ti.disabled, ti.variant_of, ti.publish_on_bajadesigns, tf.file_url
+# 							FROM `tabItem` ti
+# 							Inner Join `tabFile` tf
+# 							ON ti.item_code = tf.attached_to_name
+# 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' AND ti.publish_on_bajadesigns = 1
+# 							GROUP BY ti.item_code ORDER BY ti.creation DESC;""", as_dict=True)
 
 
 @frappe.whitelist()
@@ -23,10 +33,14 @@ def get_variants_details(variant=None):
 
 
 
-# @frappe.whitelist()
-# def get_second_cat(cat_nd=None):
-# 	return frappe.db.sql(""" SELECT name, creation, first_category, second_category
-# 						   FROM `tabItem Second Category`  WHERE first_category ='Cars' ORDER BY creation DESC ;""", as_dict=True)
+@frappe.whitelist()
+def get_second_cat(cat_nd=None):
+	return frappe.db.sql(""" SELECT ti.item_code, tiscv.second_category
+								FROM `tabItem` ti
+								INNER JOIN `tabItem Second Category Value` tiscv
+								ON tiscv.parent = ti.item_code
+								WHERE ti.brand = 'Baja Designs'
+								GROUP BY ti.item_code  ORDER BY ti.creation DESC;""", as_dict=True)
 
 # @frappe.whitelist()
 # def get_item_filter(item=None):
