@@ -6,7 +6,7 @@ import requests , json
 def get_item_details(item=None):
 	return frappe.db.sql(""" SELECT * ,tifcv.first_category, tiscv.second_category, titcv.third_category, tip.price_list_rate, tf.file_url, tim.motorcycle
 							FROM `tabItem` ti
-							Inner Join `tabFile` tf
+							LEFT Join `tabFile` tf
 							ON ti.item_code = tf.attached_to_name
 							LEFT JOIN `tabItem First Category Value` tifcv
 							ON tifcv.parent = ti.item_code
