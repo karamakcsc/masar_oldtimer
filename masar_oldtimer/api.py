@@ -18,8 +18,10 @@ def get_item_details(item=None):
 							ON tip.item_code = ti.item_code
 							LEFT JOIN `tabItem Variant Attribute` tiva
 							ON tiva.parent = ti.item_code
+							LEFT JOIN `tabItem Motorcycle` tim
+							ON tim.parent = ti.item_code
 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' And ti.publish_on_bajadesigns = 1 AND tip.price_list = 'BajaDesigns MSRP -USD'
-							ORDER BY ti.creation DESC; """,values=values, as_dict=1)
+							ORDER BY ti.creation DESC; """, as_dict=1)
 
 # @frappe.whitelist()
 # def get_item_details(item=None):
