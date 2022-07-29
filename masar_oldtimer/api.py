@@ -23,14 +23,11 @@ def get_item_details(item=None):
 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' And ti.publish_on_bajadesigns = 1 AND tip.price_list = 'BajaDesigns MSRP -USD'
 							ORDER BY ti.creation DESC; """, as_dict=1)
 
-# @frappe.whitelist()
-# def get_item_details(item=None):
-# 	return frappe.db.sql(""" SELECT ti.name, ti.item_name, ti.item_code, ti.description, ti.image, ti.disabled, ti.variant_of, ti.publish_on_bajadesigns, tf.file_url
-# 							FROM `tabItem` ti
-# 							Inner Join `tabFile` tf
-# 							ON ti.item_code = tf.attached_to_name
-# 							WHERE ti.disabled= 0 AND ti.brand = 'Baja Designs' AND ti.publish_on_bajadesigns = 1
-# 							GROUP BY ti.item_code ORDER BY ti.creation DESC;""", as_dict=True)
+@frappe.whitelist()
+def get_customer_details(item=None):
+	return frappe.db.sql(""" SELECT *
+							FROM `tabCustomer`
+							ORDER BY creation DESC;""", as_dict=True)
 
 
 @frappe.whitelist()
